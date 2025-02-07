@@ -1,15 +1,42 @@
 
 import { QuizData } from "@/types/quiz";
 
-export const fetchQuizData = async (): Promise<QuizData> => {
-  try {
-    const response = await fetch("https://api.jsonserve.com/Uw5CrX");
-    if (!response.ok) {
-      throw new Error("Failed to fetch quiz data");
+const mockQuizData: QuizData = {
+  questions: [
+    {
+      id: 1,
+      question: "What is the capital of France?",
+      options: ["London", "Berlin", "Paris", "Madrid"],
+      correctAnswer: "Paris"
+    },
+    {
+      id: 2,
+      question: "Which planet is known as the Red Planet?",
+      options: ["Venus", "Mars", "Jupiter", "Saturn"],
+      correctAnswer: "Mars"
+    },
+    {
+      id: 3,
+      question: "What is the largest mammal in the world?",
+      options: ["African Elephant", "Blue Whale", "Giraffe", "Hippopotamus"],
+      correctAnswer: "Blue Whale"
+    },
+    {
+      id: 4,
+      question: "Who painted the Mona Lisa?",
+      options: ["Vincent van Gogh", "Pablo Picasso", "Leonardo da Vinci", "Michelangelo"],
+      correctAnswer: "Leonardo da Vinci"
+    },
+    {
+      id: 5,
+      question: "What is the chemical symbol for gold?",
+      options: ["Ag", "Fe", "Au", "Cu"],
+      correctAnswer: "Au"
     }
-    return await response.json();
-  } catch (error) {
-    console.error("Error fetching quiz data:", error);
-    throw error;
-  }
+  ]
+};
+
+export const fetchQuizData = async (): Promise<QuizData> => {
+  // Return mock data instead of making an API call
+  return Promise.resolve(mockQuizData);
 };
