@@ -19,31 +19,34 @@ const QuizResults = ({ score, totalQuestions, onRetry }: QuizResultsProps) => {
   );
 
   return (
-    <div className="w-full max-w-2xl mx-auto p-6 animate-scale-in">
-      <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">
+    <div className="w-full max-w-2xl mx-auto p-8 animate-scale-in">
+      <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center animate-fade-in">
         Quiz Complete!
       </h2>
 
-      <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
+      <div className="bg-white/50 backdrop-blur-sm rounded-2xl shadow-lg p-8 mb-8 border border-white/20">
         <div className="text-center mb-6">
-          <p className="text-6xl font-bold text-primary mb-2">
+          <p className="text-7xl font-bold text-primary mb-2 animate-scale-in">
             {Math.round(percentage)}%
           </p>
-          <p className="text-gray-600">
+          <p className="text-gray-600 animate-fade-in delay-200">
             You scored {score} out of {totalQuestions}
           </p>
         </div>
 
         {earnedAchievements.length > 0 && (
           <div className="border-t border-gray-200 pt-6 mt-6">
-            <h3 className="text-xl font-semibold text-gray-800 mb-4">
+            <h3 className="text-xl font-semibold text-gray-800 mb-4 animate-fade-in delay-300">
               Achievements Unlocked
             </h3>
             <div className="flex flex-wrap gap-4">
-              {earnedAchievements.map(({ icon: Icon, label }) => (
+              {earnedAchievements.map(({ icon: Icon, label }, index) => (
                 <div
                   key={label}
-                  className="flex items-center bg-primary-light rounded-lg p-3"
+                  className="flex items-center bg-primary-light rounded-xl p-4
+                           shadow-md hover:shadow-lg transition-all duration-300
+                           border border-primary/20 animate-scale-in"
+                  style={{ animationDelay: `${400 + index * 100}ms` }}
                 >
                   <Icon className="text-primary mr-2" />
                   <span className="font-medium">{label}</span>
@@ -57,9 +60,11 @@ const QuizResults = ({ score, totalQuestions, onRetry }: QuizResultsProps) => {
       <div className="text-center">
         <button
           onClick={onRetry}
-          className="bg-primary text-white px-8 py-3 rounded-lg font-semibold
-                   transform transition-all duration-200 hover:scale-105 hover:bg-primary-dark
-                   focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50"
+          className="bg-primary text-white px-8 py-3 rounded-xl font-semibold
+                   transform transition-all duration-300 hover:scale-105 hover:bg-primary-dark
+                   focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50
+                   shadow-lg hover:shadow-xl border border-primary/20 backdrop-blur-sm
+                   animate-scale-in delay-500"
         >
           Try Again
         </button>

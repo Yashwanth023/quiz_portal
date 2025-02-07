@@ -82,30 +82,38 @@ const Index = () => {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="animate-pulse text-xl text-gray-600">Loading quiz...</div>
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-secondary/50 to-secondary-dark/50">
+        <div className="animate-pulse text-xl text-gray-600 bg-white/50 backdrop-blur-sm rounded-xl p-6 shadow-lg">
+          Loading quiz...
+        </div>
       </div>
     );
   }
 
   if (!hasStarted) {
-    return <QuizStart onStart={handleStart} />;
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-secondary/50 to-secondary-dark/50 p-4">
+        <QuizStart onStart={handleStart} />
+      </div>
+    );
   }
 
   if (quizState.isComplete) {
     return (
-      <QuizResults
-        score={quizState.score}
-        totalQuestions={quizData?.questions.length || 0}
-        onRetry={handleRetry}
-      />
+      <div className="min-h-screen bg-gradient-to-br from-secondary/50 to-secondary-dark/50 p-4">
+        <QuizResults
+          score={quizState.score}
+          totalQuestions={quizData?.questions.length || 0}
+          onRetry={handleRetry}
+        />
+      </div>
     );
   }
 
   const currentQuestion = quizData?.questions[quizState.currentQuestion];
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8">
+    <div className="min-h-screen bg-gradient-to-br from-secondary/50 to-secondary-dark/50 py-8 px-4">
       {currentQuestion && (
         <QuizQuestion
           question={currentQuestion.question}
