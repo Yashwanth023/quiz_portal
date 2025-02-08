@@ -1,69 +1,42 @@
-# Welcome to your Lovable project
 
-## Project info
+# Tech Trivia Master
 
-**URL**: https://lovable.dev/projects/f921d6a1-eae2-459f-aff1-d4e2017bfe71
+A dynamic and interactive quiz application built with React and TypeScript, featuring modern UI design and seamless user experience.
 
-## How can I edit this code?
+## Features
 
-There are several ways of editing your application.
+### Quiz Functionality
+- Interactive quiz interface with multiple-choice questions
+- Real-time feedback on answers
+- Score tracking and final results display
+- Option to retry the quiz after completion
 
-**Use Lovable**
+### User Interface
+- Clean and modern design with gradient backgrounds
+- Responsive layout that works on all devices
+- Smooth animations and transitions
+- Glassmorphism effects for enhanced visual appeal
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/f921d6a1-eae2-459f-aff1-d4e2017bfe71) and start prompting.
+### Authentication (Coming Soon)
+- User login functionality
+- Sign-up capability
+- Profile management
 
-Changes made via Lovable will be committed automatically to this repo.
+## Technical Stack
 
-**Use your preferred IDE**
+- React with TypeScript for robust frontend development
+- Tailwind CSS for styling
+- shadcn/ui for modern UI components
+- React Query for efficient data management
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Getting Started
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Start the development server: `npm run dev`
+4. Open your browser and navigate to the local development server
 
-Follow these steps:
+## Contributing
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Feel free to submit issues and enhancement requests!
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with .
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/f921d6a1-eae2-459f-aff1-d4e2017bfe71) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
