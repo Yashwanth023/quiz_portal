@@ -138,17 +138,15 @@ const Index = () => {
             totalQuestions={quizData?.questions.length || 0}
             onRetry={handleRetry}
           />
-        ) : (
-          currentQuestion && (
-            <QuizQuestion
-              question={currentQuestion.question}
-              options={currentQuestion.options}
-              onAnswer={handleAnswer}
-              currentQuestion={quizState.currentQuestion}
-              totalQuestions={quizData?.questions.length || 0}
-            />
-          )
-        )}
+        ) : quizData && quizData.questions[quizState.currentQuestion] ? (
+          <QuizQuestion
+            question={quizData.questions[quizState.currentQuestion].question}
+            options={quizData.questions[quizState.currentQuestion].options}
+            onAnswer={handleAnswer}
+            currentQuestion={quizState.currentQuestion}
+            totalQuestions={quizData.questions.length}
+          />
+        ) : null}
       </main>
     </div>
   );
