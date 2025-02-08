@@ -1,4 +1,4 @@
-![screencapture-preview-vibrant-interaction-portal-lovable-app-2025-02-08-11_29_09](https://github.com/user-attachments/assets/f71ac312-a3ba-409a-a2a4-3f2331657f13)
+
 # Tech Trivia Master
 
 A dynamic and interactive quiz application built with React and TypeScript, featuring modern UI design and seamless user experience.
